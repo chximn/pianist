@@ -6,7 +6,7 @@ var track = new Midi.Track();
 file.addTrack(track);
 
 
-let flag = "Shellmates{1-L0v3-4r4b1C-sC4l3}"
+let flag = "HackINI{7h3-7hIn65-1-d0-F0E-l0v3}"
 
 
 let notes = ['X', 'C', 'D', 'E', 'F', 'F#', 'G#', 'B']
@@ -36,5 +36,5 @@ for (let c of flag) {
 }
 
 
-fs.writeFileSync('major.mid', file.toBytes(), 'binary');
+fs.writeFileSync('arabic.mid', file.toBytes(), 'binary');
 console.log(str)
