@@ -9,7 +9,7 @@ file.addTrack(track);
 let flag = "HackINI{7h3-7hIn65-1-d0-F0E-l0v3}"
 
 
-let notes = ['X', 'C', 'D', 'E', 'F', 'F#', 'G#', 'B']
+let notes = ['C', 'D', 'E', 'F', 'F#', 'G', 'A', 'B']
 
 let str = ''
 
@@ -24,20 +24,11 @@ for (let c of flag) {
 	for (let d of oct) {
 		let note = notes[parseInt(d)].toLowerCase() + '5'
 
-		if (d != 0) {
-			track.addNote(0, note, 64, i * 64)
-			str += note + ' '
-			if (i > 0 ) i--;
-
-		}
-
-		else {
-			str += '__ '
-			i++
-		}
+		track.addNote(0, note, 64, i * 64)
+		str += note + ' '
 	}
 }
 
 
-fs.writeFileSync('arabic.mid', file.toBytes(), 'binary');
+fs.writeFileSync('algerian.mid', file.toBytes(), 'binary');
 console.log(str)
