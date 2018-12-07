@@ -27,11 +27,14 @@ for (let c of flag) {
 		if (d != 0) {
 			track.addNote(0, note, 64, i * 64)
 			str += note + ' '
+			if (i > 0 ) i--;
+
 		}
 
-		else str += '__ '
-
-		i++
+		else {
+			str += '__ '
+			i++
+		}
 	}
 }
 
