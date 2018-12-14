@@ -9,11 +9,10 @@ file.addTrack(track);
 let flag = "HackINI{7h3-7hIn65-1-d0-F0E-l0v3}"
 
 
-let notes = ['C', 'D', 'E', 'F', 'F#', 'G', 'A', 'B']
+let notes = ['C', 'D', 'D#', 'F', 'F#', 'G', 'G#', 'B']
 
 let str = ''
 
-let i = 0
 for (let c of flag) {
 
 	let oct = c.charCodeAt(0).toString(8)
@@ -24,7 +23,7 @@ for (let c of flag) {
 	for (let d of oct) {
 		let note = notes[parseInt(d)].toLowerCase() + '5'
 
-		track.addNote(0, note, 64, i * 64)
+		track.addNote(0, note, 64, 0)
 		str += note + ' '
 	}
 }
